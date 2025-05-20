@@ -11,7 +11,7 @@ export IMAGE=${IMAGE-$IMAGE_URL}
 
 export DOCKERFILE=${DOCKERFILE-${{ values.dockerfile }}}
 export CONTEXT=${CONTEXT-${{ values.buildContext }}}
-export TLSVERIFY=${TLSVERIFY-false}
+export TLSVERIFY=${TLSVERIFY-true}
 export BUILD_ARGS=${BUILD_ARGS-""}
 export BUILD_ARGS_FILE=${BUILD_ARGS_FILE-""}
 
@@ -41,13 +41,13 @@ export TARGET_BRANCH=${TARGET_BRANCH-""}
 # enterprise contract
 export POLICY_CONFIGURATION=${POLICY_CONFIGURATION-"github.com/enterprise-contract/config//rhtap-v0.6"}
 #internal, assumes jenkins is local openshift
-export REKOR_HOST=${REKOR_HOST-http://rekor-server.tssc-tas.svc}
+export REKOR_HOST=${REKOR_HOST-http://rekor-server.rhtap-tas.svc}
 export IGNORE_REKOR=${IGNORE_REKOR-false}
 export INFO=${INFO-true}
 export STRICT=${STRICT-true}
 export EFFECTIVE_TIME=${EFFECTIVE_TIME-now}
 export HOMEDIR=${HOMEDIR-$(pwd)}
-export TUF_MIRROR=${TUF_MIRROR-http://tuf.tssc-tas.svc}
+export TUF_MIRROR=${TUF_MIRROR-http://tuf.rhtap-tas.svc}
 
 export CUSTOM_ROOT_CA=${CUSTOM_ROOT_CA-""}
 
