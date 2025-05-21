@@ -1,6 +1,6 @@
 # Generated from templates/source-repo/.gitlab-ci.yml.njk. Do not edit directly.
 
-image: quay.io/redhat-appstudio/rhtap-task-runner:latest
+image: quay.io/rhopp/rhtap-task-runner:dev
 
 variables:
   CI_TYPE: gitlab
