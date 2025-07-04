@@ -25,6 +25,7 @@ spec:
             rows: 5
           ui:field: EntityNamePicker
           maxLength: 63
+          pattern: '^[a-z0-9]([-a-z0-9]*[a-z0-9])?$'
         owner:
           title: Owner
           type: string
@@ -34,6 +35,9 @@ spec:
           ui:options:
             catalogFilter:
               kind: [Group, User]
+      errorMessage:
+        properties:
+          name: 'Name must be lowercase alphanumeric characters or hyphens, starting and ending with alphanumeric characters (e.g. "my-app", "app123")'
     - title: Application Repository Information
       required:
         - hostType
